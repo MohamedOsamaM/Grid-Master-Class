@@ -1,0 +1,430 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  /* padding: 0; */
+}
+/*start parent*/
+div.parent {
+  display: grid;
+  grid-template-areas:
+    "child1 child1 child1 child1 child1 child1 child2 child2 child2 child2 child2 child2"
+    "child3 child3 child3 child4 child4 child4 child4 child4 child4 child5 child5 child5"
+    "child6 child6 child6 child7 child7 child7 child7 child7 child7 child5 child5 child5"
+    "child8 child8 child8 child9 child9 child9 child10 child10 child10 child10 child10 child10";
+  grid-template-columns: repeat(12,1fr);
+  grid-template-rows: repeat(3,1fr) 31vh ; 
+}
+div.parent > div{
+  padding: 20px;
+}
+/*end parent*/
+
+/*start child1*/
+.child1 {
+  grid-area: child1;
+  display: grid;
+  grid-template-areas: "part1 part2";
+  overflow: hidden;
+}
+.child1 .part1 {
+  grid-area: part1;
+}
+.child1 .part1 span {
+  font-weight: 700;
+  font-size: 12px;
+  color: #9fa3a7;
+  line-height: 20px;
+}
+.child1 .part1 h3 {
+  font-weight: 400;
+  font-size: 22px;
+  color: #333333;
+  line-height: 32px;
+}
+.child1 .part1 p {
+  font-weight: 400;
+  font-size: 14px;
+  color: #9fa3a7;
+  line-height: 26px;
+}
+.child1 .part2 {
+  grid-area: part2;
+  display: grid;
+  place-content: center center;
+  place-items: center center;
+  position: relative;
+}
+.child1 .part2 img {
+  width: 70%;
+  display: block;
+  position: relative;
+  bottom: -10%;
+}
+/*end child1*/
+
+/*start child2*/
+.child2 {
+  grid-area: child2;
+  text-align: center;
+  background-color: #f7f8f9;
+}
+.child2 p{
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 20px;
+  color: #9fa3a7;
+}
+.child2 h1{
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 60px;
+  color: #333333;
+}
+.child2 a{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  color: #27b9c2;
+}
+/*end child2*/
+
+/*start child3*/
+.child3 {
+  grid-area: child3;
+  background-color: red;
+  text-align: center;
+  display: grid;
+  grid-template-areas: "part1"
+  "part2"
+  "part3";
+  place-items: center center;
+  place-content: center center;
+}
+.child3 img{
+  width: 50%;
+  display: block;
+  grid-area: part1;
+}
+.child3 h3{
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 32px;
+  color: #fffbfb;
+  grid-area: part2;
+}
+.child3 a{
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 26px;
+  color: #ffc80a;
+  letter-spacing: 3px;
+  grid-area: part3;
+}
+/*end child3*/
+
+/*start child4*/
+.child4 {
+  grid-area: child4;
+  display: grid;
+  grid-template-areas: "part1 part2";
+  grid-template-columns: repeat(2 , 1fr) ;
+  grid-template-rows: 1fr;
+  overflow: hidden;
+}
+.child4 .part1{
+  padding: 5%;
+  grid-area: part1;
+  display: grid;
+  grid-template-areas: "part1"
+  "part2"
+  "part3";
+  place-content: center ;
+  place-items: center ;
+  position: relative;
+}
+.child4 .part1 p{
+  grid-area: part1;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 20px;
+  color: #9fa3a7;
+  text-align: center;
+}
+.child4 .part1 h3{
+  grid-area: part2;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
+  color: #333333;
+}
+.child4 .part1 img{
+  grid-area: part3;
+  width: 100%;
+  display: block;
+  position: relative;
+  left: -45%;
+  bottom: -50%;
+  transform: scale(1.3);
+}
+.child4 .part2{
+  grid-area: part2;
+  display: grid;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+.child4 .part2 p{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    color: #9fa3a7;
+}
+.child4 .part2 a{
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 26px;
+    color: #27b9c2;
+    letter-spacing: 5px;
+    text-decoration: none;
+}
+/*end child4*/
+
+/*start child5*/
+.child5 {
+  grid-area: child5;
+  background-color: #8F76BC;
+  text-align: center;
+}
+.child5 h2{
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 36px;
+  color: white;
+}
+.child5 p{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  color: white;
+}
+.child5 button{
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 26px;
+  color: black;
+  padding: 10px;
+  letter-spacing: 3px;
+  border: 0;
+  border-radius: 30px;
+  background-color: #FFC80A;
+}
+.child5 .floppy{
+  padding: 10px;
+  background-color: #8166B0;
+  text-align: center;
+  border-radius: 50%;
+}
+.child5 .floppy img{
+  display: block;
+  width: 70%;
+  margin: auto;
+}
+.child5 .floppy .popular{
+  text-align: center;
+  font-weight: 700;
+  font-size: 9px;
+  line-height: 23px;
+  color: white;
+  background-color: #8B72B6;
+  padding: 2px;
+  border-radius: 20px;
+  letter-spacing: 2px;
+  width: 25%;
+  margin: auto;
+  margin-bottom: 5px;
+  
+}
+.child5 .floppy .popular i{
+  color: #DCAE3D;
+}
+.child5 .floppy p{
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 20px;
+  color: white;
+}
+/*end child5*/
+
+/*start child6*/
+.child6{
+  grid-area: child6;
+  text-align: center;
+  display: grid;
+  place-content: center center;
+  place-items: center center;
+}
+.child6 img{
+  width: 50%;
+  margin: auto;
+  display: block;
+}
+.child6 h3{
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
+  color: #333333;
+}
+.child6 a{
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 26px;
+  color: #27b9c2;
+  letter-spacing: 5px;
+}
+/*end child6*/
+
+/*start child7*/
+.child7 {
+  grid-area: child7;
+  background-color: #93B6B7;
+  text-align: center;
+  display: grid;
+  place-content: space-between space-between;
+  place-items: space-between space-between;
+  position: relative;
+  overflow: hidden;
+}
+.child7 div{
+  padding: 3px;
+  border-radius: 20px;
+  background-color: red;
+  font-weight: 700;
+  font-size: 8px;
+  line-height: 20px;
+  color: white;
+  width: 16%;
+  letter-spacing: 2px;
+  text-align: left;
+  justify-self: self-start;
+  position: relative;
+}
+.child7 div span{
+  text-align: center;
+  display: block;
+  margin: auto;
+}
+.child7 h3{
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 32px;
+  color: white;
+}
+.child7 img{
+  width: 80%;
+  margin: auto;
+  align-self:self-end;
+  position: relative;
+  bottom: -10%;
+}
+/*end child7*/
+
+/*start child8*/
+.child8 {
+  grid-area: child8;
+  background-color: #38D5F4;
+  text-align: center;
+  display: grid;
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+}
+.child8 div{
+  background-color: #35CFED;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  place-items: center;
+  width: 150%;
+  height: 200%;
+}
+.child8 img{
+  width: 5  0%;
+  margin: auto;
+  display: block;
+}
+.child8 h3{
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
+  color: white;
+}
+/*end child8*/
+
+/*start child9*/
+.child9 {
+  grid-area: child9;
+  background-color: white;
+  text-align: center;
+  display: grid;
+  place-content: center;
+  place-items: center;
+}
+.child9 div{
+  background-color: #7BC424;
+  padding: 5px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 8px;
+  line-height: 20px;
+  color: white;
+  width: 25%;
+  margin: auto;
+  text-align: center;
+  border-radius: 15px;
+}
+.child9 h3{
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
+  color: #333333;
+}
+/*end child9*/
+
+/*start child10*/
+.child10 {
+  grid-area: child10;
+  background-color: #2C2C2C;
+  display: grid;
+  grid-template-areas: "part1 part2";
+  overflow: hidden;
+}
+.child10 .part1{
+  grid-area: part1;
+  display: grid;
+  place-content: center;
+  place-items: center;
+  overflow: hidden; 
+}
+.child10 .part2{
+  grid-area: part2;
+  display: grid;
+  place-content: center;
+  place-items: center;
+}
+.child10 .part1 img{
+  width: 50%;
+  margin: auto;
+}
+.child10 .part2 h3{
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
+  color: white;
+}
+/*end child10*/
